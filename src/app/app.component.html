@@ -1,11 +1,13 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm-12">
+    <div class="col-sm-12 pb-3">
       <h1>Animations</h1>
       <button class="btn btn-primary" (click)="onAnimate()">Animate!</button>
       <button class="btn btn-primary" (click)="onShrink()">Shrink!</button>
     </div>
   </div>
+
+  <div style="width: 120px; height: 120px" [@divState]='state'></div>
   <hr>
   <div class="row">
     <div class="col-sm-12">
