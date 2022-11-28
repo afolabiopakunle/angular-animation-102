@@ -1,4 +1,4 @@
-import { state, trigger, style } from '@angular/animations';
+import { state, trigger, style, transition, animate } from '@angular/animations';
 import { Component, VERSION } from '@angular/core';
 
 @Component({
@@ -14,7 +14,8 @@ import { Component, VERSION } from '@angular/core';
       state('end', style({
         backgroundColor: 'green',
         transform: 'translateX(140px)'
-      }))
+      })),
+      transition('start <=> end', animate(500))
     ])
   ]
 })
