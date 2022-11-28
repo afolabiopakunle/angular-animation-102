@@ -1,4 +1,26 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1>Animations</h1>
+      <button class="btn btn-primary" (click)="onAnimate()">Animate!</button>
+      <button class="btn btn-primary" (click)="onShrink()">Shrink!</button>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-sm-12">
+      <input type="text" #input class="form-control w-50">
+      <button class="btn btn-primary" (click)="onAdd()">Add Item!</button>
+    </div>
+  </div>
+  <hr>
+  <ul class="list-group">
+    <li 
+    class="list-group-item" 
+    (click)='onDelete()'
+    *ngFor="let item of list">
+    {{ item }}
+    </li>
+  </ul>
+</div>
+
